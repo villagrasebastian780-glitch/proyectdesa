@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Tecnología</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Iniciar sesión</h2>
+    {% if error %}<p class="error">{{ error }}</p>{% endif %}
+    <form method="post">
+      {% csrf_token %}
+      <label for="username">Usuario</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit" class="btn">Entrar</button>
+    </form>
+    <p>Credenciales de prueba: admin / admin123</p>
+  </div>
+</body>
+</html>

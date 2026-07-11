@@ -1,17 +1,26 @@
-# Crear entorno virutal (venv)
+# App Django
+
+Esta aplicación Django se ejecuta dentro de Docker. No necesitas crear un entorno virtual manualmente.
+
+## Dependencias
+
+`requirements.txt` contiene:
+
+- Django>=4.2
+- requests
+
+## Ejecución dentro de Docker
+
+Desde la raíz del proyecto, ejecuta:
+
+```bash
+docker compose up --build
 ```
-python3 -m venv venv
-```
-# Activar entorno virtual
-```
-source venv/bin/activate
-```
-# Instalar dependencias
-```
-pip install django requests mysqlclient
-```
-# Crear proyecto
-```
-django-admin startproject config .
-python manage.py startapp core
-```
+
+La aplicación Django se servirá en `http://localhost:8000`.
+
+## Estructura relevante
+
+- `config/`: configuración del proyecto Django
+- `core/`: aplicación Django que renderiza la página principal
+- `core/templates/index.html`: plantilla que muestra el catálogo desde la API
