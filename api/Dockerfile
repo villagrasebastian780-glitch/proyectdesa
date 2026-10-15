@@ -9,8 +9,6 @@ COPY . .
 
 RUN npm run build
 
-RUN npm install -g pm2
-
 EXPOSE 3000
 
-CMD ["pm2-runtime", "ecosystem.config.js"]
+CMD ["node", "dist/app.js"]
