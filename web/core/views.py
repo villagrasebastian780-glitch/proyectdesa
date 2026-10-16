@@ -35,6 +35,21 @@ def home(request):
     return render(request, 'index.html', {'data': data})
 
 
+@login_required(login_url='login')
+def cel(request):
+    return render(request, 'cel.html')
+
+
+@login_required(login_url='login')
+def lap(request):
+    return render(request, 'lap.html')
+
+
+@login_required(login_url='login')
+def tablets(request):
+    return render(request, 'tap.html')
+
+
 def logout_view(request):
     logout(request)
     return redirect('login')

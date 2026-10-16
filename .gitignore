@@ -5,3 +5,9 @@ web/venv/
 __pycache__/
 .DS_Store
 .env
+
+venv/
+.venv/
+web/venv/
+__pycache__/
+db.sqlite3
